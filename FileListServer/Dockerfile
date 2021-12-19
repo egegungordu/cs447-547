@@ -1,10 +1,10 @@
 FROM alpine/git as clone
 WORKDIR /app
-RUN git clone https://github.com/makcay/cs547.git
+RUN git clone https://github.com/egegungordu/cs447-547.git
 
 FROM maven:3.5-jdk-8-alpine as build
 WORKDIR /app
-COPY --from=clone /app/cs547/FileListServer /app
+COPY --from=clone /app/cs447-547/FileListServer /app
 RUN ["mvn", "compile"]
 RUN ["mvn", "verify"]
 RUN ["mvn", "package"]
