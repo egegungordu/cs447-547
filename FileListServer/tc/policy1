@@ -1,4 +1,4 @@
-loss 0%
-delay 0ms
-rate 100Kbps
+loss 50%
+delay 2500ms
+rate 1Kbps
 wait 99999
